@@ -1,0 +1,6 @@
+{
+  "name": "Biloti",
+  "description": "Biloti provides professional commercial cleaning, pressure washing, property maintenance and building services across New Zealand. Care Beyond Buildings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
