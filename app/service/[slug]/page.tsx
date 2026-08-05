@@ -232,30 +232,50 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
 
           {/* 7. Work Process */}
-          <div className="space-y-6 text-center">
-            <h2 className="text-2xl font-bold text-[#0F172A]">
-              Our Simple Four-Step Service Process
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
-              <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-2">
-                <span className="text-xs font-bold text-[#1F6F50] uppercase">Step 01</span>
-                <h3 className="font-bold text-base text-[#0F172A]">1. Request Quote</h3>
-                <p className="text-xs text-slate-600">Select your required service and submit details online.</p>
+          <div className="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 shadow-xs space-y-6">
+            <div className="space-y-1">
+              <h2 className="text-2xl font-bold text-[#0F172A]">
+                Our Working Process
+              </h2>
+              <p className="text-sm text-slate-600">
+                A structured, disciplined approach ensuring consistent quality and seamless delivery for every job.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
+              <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1.5">
+                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">01. Assessment</span>
+                <h3 className="font-bold text-base text-[#0F172A]">Assessment</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  We assess your site, requirements, priorities, and any specific challenges before work begins.
+                </p>
               </div>
-              <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-2">
-                <span className="text-xs font-bold text-[#1F6F50] uppercase">Step 02</span>
-                <h3 className="font-bold text-base text-[#0F172A]">2. Inspection & Plan</h3>
-                <p className="text-xs text-slate-600">We issue a transparent, no-obligation estimate for your site.</p>
+              <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1.5">
+                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">02. Preparation</span>
+                <h3 className="font-bold text-base text-[#0F172A]">Preparation</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Our team develops a clear work plan, confirms resources, and prepares the right equipment and materials.
+                </p>
               </div>
-              <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-2">
-                <span className="text-xs font-bold text-[#1F6F50] uppercase">Step 03</span>
-                <h3 className="font-bold text-base text-[#0F172A]">3. Schedule Service</h3>
-                <p className="text-xs text-slate-600">Choose a convenient date and time aligned with your calendar.</p>
+              <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1.5">
+                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">03. Execution</span>
+                <h3 className="font-bold text-base text-[#0F172A]">Execution</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  The work is completed safely and efficiently by trained professionals, with minimal disruption to your operations.
+                </p>
               </div>
-              <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-2">
-                <span className="text-xs font-bold text-[#1F6F50] uppercase">Step 04</span>
-                <h3 className="font-bold text-base text-[#0F172A]">4. Biloti Execution</h3>
-                <p className="text-xs text-slate-600">Our technicians arrive on time and complete work impeccably.</p>
+              <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1.5">
+                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">04. Review</span>
+                <h3 className="font-bold text-base text-[#0F172A]">Review</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  We inspect the completed work, check quality standards, and address any areas requiring further attention.
+                </p>
+              </div>
+              <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1.5 sm:col-span-2 lg:col-span-1">
+                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">05. Complete</span>
+                <h3 className="font-bold text-base text-[#0F172A]">Complete</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Once approved, we finalise the service, provide relevant documentation, and ensure you are fully satisfied.
+                </p>
               </div>
             </div>
           </div>
@@ -431,28 +451,33 @@ export default async function ServicePage({ params }: ServicePageProps) {
               {/* 10. Biloti Service Process */}
               <div className="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 shadow-xs space-y-6">
                 <h2 className="text-xl sm:text-2xl font-bold text-[#0F172A]">
-                  Our {service.title} Process
+                  Our Working Process
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1">
-                    <span className="text-xs font-bold text-[#1F6F50]">01. Assessment</span>
-                    <h3 className="font-bold text-sm text-[#0F172A]">Site Inspection & Plan</h3>
-                    <p className="text-xs text-slate-600">We inspect surface conditions and formulate the safest cleaning approach.</p>
+                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">01. Assessment</span>
+                    <h3 className="font-bold text-sm text-[#0F172A]">Assessment</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">We assess your site, requirements, priorities, and any specific challenges before work begins.</p>
                   </div>
                   <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1">
-                    <span className="text-xs font-bold text-[#1F6F50]">02. Preparation</span>
-                    <h3 className="font-bold text-sm text-[#0F172A]">Surface Pre-Treatment</h3>
-                    <p className="text-xs text-slate-600">Apply eco-friendly cleaning solutions to break down grime and moss safely.</p>
+                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">02. Preparation</span>
+                    <h3 className="font-bold text-sm text-[#0F172A]">Preparation</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">Our team develops a clear work plan, confirms resources, and prepares the right equipment and materials.</p>
                   </div>
                   <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1">
-                    <span className="text-xs font-bold text-[#1F6F50]">03. Execution</span>
-                    <h3 className="font-bold text-sm text-[#0F172A]">Precision Wash / Clean</h3>
-                    <p className="text-xs text-slate-600">Execute work using soft-wash or commercial extraction equipment.</p>
+                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">03. Execution</span>
+                    <h3 className="font-bold text-sm text-[#0F172A]">Execution</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">The work is completed safely and efficiently by trained professionals, with minimal disruption to your operations.</p>
                   </div>
                   <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1">
-                    <span className="text-xs font-bold text-[#1F6F50]">04. Review</span>
-                    <h3 className="font-bold text-sm text-[#0F172A]">Final Inspection</h3>
-                    <p className="text-xs text-slate-600">Check all results against Biloti quality standards for 100% satisfaction.</p>
+                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">04. Review</span>
+                    <h3 className="font-bold text-sm text-[#0F172A]">Review</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">We inspect the completed work, check quality standards, and address any areas requiring further attention.</p>
+                  </div>
+                  <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1 sm:col-span-2">
+                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">05. Complete</span>
+                    <h3 className="font-bold text-sm text-[#0F172A]">Complete</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">Once approved, we finalise the service, provide relevant documentation, and ensure you are fully satisfied.</p>
                   </div>
                 </div>
               </div>

@@ -39,13 +39,13 @@ export default function PrivacyPolicyPage() {
             <Lock className="w-5 h-5 text-[#1F6F50]" />
             Table of Contents
           </h2>
-          <ol className="list-decimal list-inside text-sm text-slate-600 space-y-1.5 font-medium">
-            <li><a href="#overview" className="text-[#1F6F50] hover:underline">1. Privacy Overview</a></li>
-            <li><a href="#collection" className="text-[#1F6F50] hover:underline">2. Information We Collect</a></li>
-            <li><a href="#use" className="text-[#1F6F50] hover:underline">3. How We Use Your Information</a></li>
-            <li><a href="#sharing" className="text-[#1F6F50] hover:underline">4. Data Storage, Security and Third Parties</a></li>
-            <li><a href="#rights" className="text-[#1F6F50] hover:underline">5. Your Privacy Rights under NZ Law</a></li>
-            <li><a href="#contact" className="text-[#1F6F50] hover:underline">6. Privacy Officer Contact</a></li>
+          <ol className="list-decimal list-inside text-sm text-slate-600 space-y-2 font-medium">
+            <li><a href="#overview" className="text-[#1F6F50] hover:underline">Privacy Overview</a></li>
+            <li><a href="#collection" className="text-[#1F6F50] hover:underline">Information We Collect</a></li>
+            <li><a href="#use" className="text-[#1F6F50] hover:underline">How We Use Your Information</a></li>
+            <li><a href="#sharing" className="text-[#1F6F50] hover:underline">Data Storage, Security and Third Parties</a></li>
+            <li><a href="#rights" className="text-[#1F6F50] hover:underline">Your Privacy Rights under NZ Law</a></li>
+            <li><a href="#contact" className="text-[#1F6F50] hover:underline">Privacy Officer Contact</a></li>
           </ol>
         </div>
 

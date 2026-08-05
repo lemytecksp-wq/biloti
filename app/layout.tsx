@@ -41,8 +41,9 @@ export const metadata: Metadata = {
   creator: 'Biloti',
   publisher: 'Biloti',
   icons: {
-    icon: siteConfig.logo,
-    apple: siteConfig.logo,
+    icon: siteConfig.favicon,
+    shortcut: siteConfig.favicon,
+    apple: siteConfig.favicon,
   },
   openGraph: {
     type: 'website',

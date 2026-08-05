@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -23,7 +23,33 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileAccordion, setMobileAccordion] = useState<string | null>(null);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
+
+  const handleMouseEnter = (dropdown: string) => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    setActiveDropdown(dropdown);
+  };
+
+  const handleMouseLeave = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 180);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -109,8 +135,8 @@ export default function Header() {
             {/* Water Blasting Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setActiveDropdown('water-blasting')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => handleMouseEnter('water-blasting')}
+              onMouseLeave={handleMouseLeave}
             >
               <Link
                 href="/service/water-blasting"
@@ -127,23 +153,29 @@ export default function Header() {
               </Link>
 
               {activeDropdown === 'water-blasting' && (
-                <div className="absolute top-full left-0 w-72 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 mt-1 animate-in fade-in slide-in-from-top-1 duration-150 z-50">
-                  <div className="px-4 py-2 border-b border-slate-100 bg-slate-50/50">
-                    <Link href="/service/water-blasting" className="text-xs font-medium text-[#1F6F50] hover:underline flex items-center justify-between">
-                      Water Blasting Overview <ArrowRight className="w-3 h-3" />
-                    </Link>
+                <div 
+                  className="absolute top-full left-0 pt-2 z-50 w-72"
+                  onMouseEnter={() => handleMouseEnter('water-blasting')}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 animate-in fade-in slide-in-from-top-1 duration-150">
+                    <div className="px-4 py-2 border-b border-slate-100 bg-slate-50/50">
+                      <Link href="/service/water-blasting" className="text-xs font-medium text-[#1F6F50] hover:underline flex items-center justify-between">
+                        Water Blasting Overview <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+                    {waterBlastingItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`block px-4 py-2 text-sm transition-colors hover:bg-[#E8F3EE] hover:text-[#1F6F50] ${
+                          pathname === item.href ? 'text-[#1F6F50] font-medium bg-[#E8F3EE]' : 'text-[#0F172A]'
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
                   </div>
-                  {waterBlastingItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={`block px-4 py-2 text-sm transition-colors hover:bg-[#E8F3EE] hover:text-[#1F6F50] ${
-                        pathname === item.href ? 'text-[#1F6F50] font-medium bg-[#E8F3EE]' : 'text-[#0F172A]'
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
                 </div>
               )}
             </div>
@@ -151,8 +183,8 @@ export default function Header() {
             {/* Cleaning Services Dropdown (Mega Menu) */}
             <div 
               className="relative"
-              onMouseEnter={() => setActiveDropdown('cleaning-services')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => handleMouseEnter('cleaning-services')}
+              onMouseLeave={handleMouseLeave}
             >
               <Link
                 href="/service/cleaning-services"
@@ -169,25 +201,31 @@ export default function Header() {
               </Link>
 
               {activeDropdown === 'cleaning-services' && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-white rounded-2xl shadow-xl border border-slate-100 p-4 mt-1 animate-in fade-in slide-in-from-top-1 duration-150 z-50">
-                  <div className="px-3 py-1.5 mb-2 border-b border-slate-100 bg-slate-50/50 rounded-xl flex items-center justify-between">
-                    <span className="text-xs uppercase tracking-wider font-medium text-slate-500">All Cleaning Solutions</span>
-                    <Link href="/service/cleaning-services" className="text-xs font-medium text-[#1F6F50] hover:underline flex items-center gap-1">
-                      View All <ArrowRight className="w-3 h-3" />
-                    </Link>
-                  </div>
-                  <div className="grid grid-cols-2 gap-x-2 gap-y-1">
-                    {cleaningServicesItems.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className={`px-3 py-2 text-sm rounded-lg transition-colors hover:bg-[#E8F3EE] hover:text-[#1F6F50] ${
-                          pathname === item.href ? 'text-[#1F6F50] font-medium bg-[#E8F3EE]' : 'text-[#0F172A]'
-                        }`}
-                      >
-                        {item.name}
+                <div 
+                  className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50 w-[540px]"
+                  onMouseEnter={() => handleMouseEnter('cleaning-services')}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-4 animate-in fade-in slide-in-from-top-1 duration-150">
+                    <div className="px-3 py-1.5 mb-2 border-b border-slate-100 bg-slate-50/50 rounded-xl flex items-center justify-between">
+                      <span className="text-xs uppercase tracking-wider font-medium text-slate-500">All Cleaning Solutions</span>
+                      <Link href="/service/cleaning-services" className="text-xs font-medium text-[#1F6F50] hover:underline flex items-center gap-1">
+                        View All <ArrowRight className="w-3 h-3" />
                       </Link>
-                    ))}
+                    </div>
+                    <div className="grid grid-cols-2 gap-x-2 gap-y-1">
+                      {cleaningServicesItems.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={`px-3 py-2 text-sm rounded-lg transition-colors hover:bg-[#E8F3EE] hover:text-[#1F6F50] ${
+                            pathname === item.href ? 'text-[#1F6F50] font-medium bg-[#E8F3EE]' : 'text-[#0F172A]'
+                          }`}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
@@ -210,8 +248,8 @@ export default function Header() {
             {/* Garden Maintenance Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setActiveDropdown('garden-maintenance')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => handleMouseEnter('garden-maintenance')}
+              onMouseLeave={handleMouseLeave}
             >
               <Link
                 href="/service/garden-maintenance"
@@ -228,23 +266,29 @@ export default function Header() {
               </Link>
 
               {activeDropdown === 'garden-maintenance' && (
-                <div className="absolute top-full left-0 w-72 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 mt-1 animate-in fade-in slide-in-from-top-1 duration-150 z-50">
-                  <div className="px-4 py-2 border-b border-slate-100 bg-slate-50/50">
-                    <Link href="/service/garden-maintenance" className="text-xs font-medium text-[#1F6F50] hover:underline flex items-center justify-between">
-                      Garden Maintenance Overview <ArrowRight className="w-3 h-3" />
-                    </Link>
+                <div 
+                  className="absolute top-full left-0 pt-2 z-50 w-72"
+                  onMouseEnter={() => handleMouseEnter('garden-maintenance')}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 animate-in fade-in slide-in-from-top-1 duration-150">
+                    <div className="px-4 py-2 border-b border-slate-100 bg-slate-50/50">
+                      <Link href="/service/garden-maintenance" className="text-xs font-medium text-[#1F6F50] hover:underline flex items-center justify-between">
+                        Garden Maintenance Overview <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+                    {gardenMaintenanceItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`block px-4 py-2 text-sm transition-colors hover:bg-[#E8F3EE] hover:text-[#1F6F50] ${
+                          pathname === item.href ? 'text-[#1F6F50] font-medium bg-[#E8F3EE]' : 'text-[#0F172A]'
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
                   </div>
-                  {gardenMaintenanceItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={`block px-4 py-2 text-sm transition-colors hover:bg-[#E8F3EE] hover:text-[#1F6F50] ${
-                        pathname === item.href ? 'text-[#1F6F50] font-medium bg-[#E8F3EE]' : 'text-[#0F172A]'
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
                 </div>
               )}
             </div>

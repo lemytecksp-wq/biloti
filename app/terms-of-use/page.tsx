@@ -39,14 +39,14 @@ export default function TermsOfUsePage() {
             <FileText className="w-5 h-5 text-[#1F6F50]" />
             Table of Contents
           </h2>
-          <ol className="list-decimal list-inside text-sm text-slate-600 space-y-1.5 font-medium">
-            <li><a href="#acceptance" className="text-[#1F6F50] hover:underline">1. Acceptance of Terms</a></li>
-            <li><a href="#services" className="text-[#1F6F50] hover:underline">2. Services and Quotes</a></li>
-            <li><a href="#booking" className="text-[#1F6F50] hover:underline">3. Booking, Cancellation and Scheduling</a></li>
-            <li><a href="#access" className="text-[#1F6F50] hover:underline">4. Property Access, Water and Power Utilities</a></li>
-            <li><a href="#payment" className="text-[#1F6F50] hover:underline">5. Payment Terms and Invoicing</a></li>
-            <li><a href="#liability" className="text-[#1F6F50] hover:underline">6. Limitation of Liability and Surface Conditions</a></li>
-            <li><a href="#contact" className="text-[#1F6F50] hover:underline">7. Contact Information</a></li>
+          <ol className="list-decimal list-inside text-sm text-slate-600 space-y-2 font-medium">
+            <li><a href="#acceptance" className="text-[#1F6F50] hover:underline">Acceptance of Terms</a></li>
+            <li><a href="#services" className="text-[#1F6F50] hover:underline">Services and Quotes</a></li>
+            <li><a href="#booking" className="text-[#1F6F50] hover:underline">Booking, Cancellation and Scheduling</a></li>
+            <li><a href="#access" className="text-[#1F6F50] hover:underline">Property Access, Water and Power Utilities</a></li>
+            <li><a href="#payment" className="text-[#1F6F50] hover:underline">Payment Terms and Invoicing</a></li>
+            <li><a href="#liability" className="text-[#1F6F50] hover:underline">Limitation of Liability and Surface Conditions</a></li>
+            <li><a href="#contact" className="text-[#1F6F50] hover:underline">Contact Information</a></li>
           </ol>
         </div>
 

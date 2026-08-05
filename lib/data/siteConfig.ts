@@ -2,7 +2,8 @@ export const siteConfig = {
   name: "Biloti Property Care",
   tagline: "Care Beyond Buildings",
   url: "https://biloti.co.nz",
-  logo: "https://biloti.co.nz/wp-content/uploads/2026/07/4-Garden-Maintenance-7-e1785348418520.png",
+  logo: "https://biloti.co.nz/wp-content/uploads/2026/07/newlogo.png",
+  favicon: "https://biloti.co.nz/wp-content/uploads/2026/07/favi.png",
   contact: {
     address: "Auckland, New Zealand",
     email: "info@biloti.co.nz",
