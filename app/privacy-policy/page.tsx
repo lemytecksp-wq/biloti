@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { ChevronRight, ShieldCheck, FileText, Lock } from 'lucide-react';
+import { ChevronRight, ShieldCheck, FileText, Lock, Mail, Phone, MapPin } from 'lucide-react';
 import { siteConfig } from '@/lib/data/siteConfig';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Biloti Property Care',
-  description: 'Privacy Policy outlining how Biloti Property Care collects, protects, and uses customer information in New Zealand.',
+  title: 'Privacy Policy | Biloti',
+  description: 'Privacy Policy outlining how Biloti (Great33 Limited) collects, protects, and uses information in New Zealand.',
 };
 
 export default function PrivacyPolicyPage() {
@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-xs text-slate-400">
-            Last Updated: August 2026 • Biloti Property Care Auckland
+            Effective Date: 12 July 2026 • Biloti (Great33 Limited)
           </p>
         </div>
       </section>
@@ -40,95 +40,138 @@ export default function PrivacyPolicyPage() {
             Table of Contents
           </h2>
           <ol className="list-decimal list-inside text-sm text-slate-600 space-y-2 font-medium">
-            <li><a href="#overview" className="text-[#1F6F50] hover:underline">Privacy Overview</a></li>
             <li><a href="#collection" className="text-[#1F6F50] hover:underline">Information We Collect</a></li>
             <li><a href="#use" className="text-[#1F6F50] hover:underline">How We Use Your Information</a></li>
-            <li><a href="#sharing" className="text-[#1F6F50] hover:underline">Data Storage, Security and Third Parties</a></li>
-            <li><a href="#rights" className="text-[#1F6F50] hover:underline">Your Privacy Rights under NZ Law</a></li>
-            <li><a href="#contact" className="text-[#1F6F50] hover:underline">Privacy Officer Contact</a></li>
+            <li><a href="#sharing" className="text-[#1F6F50] hover:underline">Sharing Your Information</a></li>
+            <li><a href="#storage" className="text-[#1F6F50] hover:underline">Storage and Security</a></li>
+            <li><a href="#rights" className="text-[#1F6F50] hover:underline">Your Rights</a></li>
+            <li><a href="#cookies" className="text-[#1F6F50] hover:underline">Cookies</a></li>
+            <li><a href="#contact" className="text-[#1F6F50] hover:underline">Contact Us</a></li>
           </ol>
         </div>
 
         {/* Legal Body */}
         <div className="bg-white p-8 sm:p-12 rounded-2xl border border-slate-200 shadow-xs space-y-8 text-slate-700 leading-relaxed text-sm sm:text-base">
           
-          <section id="overview" className="space-y-3">
-            <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
-              1. Privacy Overview
-            </h2>
-            <p>
-              At Biloti Property Care, we are committed to respecting and protecting the personal information of our clients, property managers, and website visitors. This Privacy Policy explains how we collect, store, use, and disclose personal information in accordance with the New Zealand Privacy Act 2020.
+          <div className="space-y-3 border-b border-slate-200 pb-6">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#1F6F50]">
+              Effective Date: 12 July 2026
             </p>
-          </section>
+            <p className="text-base sm:text-lg text-[#0F172A] font-medium leading-relaxed">
+              Biloti is a trading name of Great33 Limited (&quot;Biloti&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). We are committed to protecting your privacy and handling your personal information responsibly.
+            </p>
+          </div>
 
           <section id="collection" className="space-y-3">
             <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
-              2. Information We Collect
+              1. Information We Collect
             </h2>
             <p>
-              When you fill out our Get a Quote form, contact us, or request property services, we may collect the following information:
+              When you submit an enquiry or contact us, we may collect:
             </p>
-            <ul className="list-disc list-inside space-y-1 pl-2 text-slate-600">
-              <li>Full name, job title, and company name</li>
-              <li>Contact details including phone numbers and email addresses</li>
-              <li>Site address, city region, and property details</li>
-              <li>Specific property care requirements and scheduling preferences</li>
-              <li>IP addresses and anonymous website usage analytics</li>
+            <ul className="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+              <li>Company name</li>
+              <li>Contact person&apos;s name</li>
+              <li>Email address</li>
+              <li>Phone number</li>
+              <li>Site name and address</li>
+              <li>City</li>
+              <li>Property details</li>
+              <li>Services requested</li>
+              <li>Additional information you provide</li>
+              <li>Any files or photos you choose to upload</li>
             </ul>
           </section>
 
           <section id="use" className="space-y-3">
             <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
-              3. How We Use Your Information
+              2. How We Use Your Information
             </h2>
             <p>
-              We collect personal information solely for legitimate operational purposes, including:
+              We use your information to:
             </p>
-            <ul className="list-disc list-inside space-y-1 pl-2 text-slate-600">
-              <li>Preparing accurate service estimates and commercial cleaning quotes</li>
-              <li>Scheduling technicians and carrying out requested property care work</li>
-              <li>Communicating job progress, invoicing, and service updates</li>
-              <li>Improving our website navigation, service offerings, and customer care</li>
+            <ul className="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+              <li>Respond to your enquiry</li>
+              <li>Prepare quotations and proposals</li>
+              <li>Arrange site inspections</li>
+              <li>Deliver our cleaning and facilities management services</li>
+              <li>Communicate with you regarding your request</li>
+              <li>Improve our services and customer experience</li>
+              <li>Meet our legal and regulatory obligations</li>
             </ul>
           </section>
 
           <section id="sharing" className="space-y-3">
             <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
-              4. Data Storage, Security and Third Parties
+              3. Sharing Your Information
             </h2>
             <p>
-              We hold your personal data securely in password-protected electronic systems with restricted employee access. We do not sell, rent, or trade customer lists or personal data to third parties. We may disclose personal information only when required by New Zealand law or to authorized service partners necessary to complete requested work.
+              We do not sell your personal information.
+            </p>
+            <p>
+              We may share your information with trusted employees, contractors, suppliers, or service providers where necessary to deliver our services or operate our business. We may also disclose information where required by law.
+            </p>
+          </section>
+
+          <section id="storage" className="space-y-3">
+            <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
+              4. Storage and Security
+            </h2>
+            <p>
+              We take reasonable steps to protect your information from unauthorised access, loss, misuse, or disclosure. While we use appropriate security measures, no method of electronic transmission or storage is completely secure.
             </p>
           </section>
 
           <section id="rights" className="space-y-3">
             <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
-              5. Your Privacy Rights under NZ Law
+              5. Your Rights
             </h2>
             <p>
-              Under the New Zealand Privacy Act 2020, you have the right to request access to any personal information we hold about you and request correction if it is inaccurate or out of date.
+              You may request access to, or correction of, the personal information we hold about you in accordance with the New Zealand Privacy Act 2020.
             </p>
           </section>
 
-          <section id="contact" className="space-y-3 pt-4 border-t border-slate-200">
-            <h2 className="text-xl font-bold text-[#0F172A]">
-              6. Privacy Officer Contact
+          <section id="cookies" className="space-y-3">
+            <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
+              6. Cookies
             </h2>
             <p>
-              To exercise your rights or ask any questions regarding our Privacy Policy, please contact our Privacy Officer:
+              Our website may use cookies or similar technologies to improve website functionality and understand website usage.
             </p>
-            <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 space-y-1.5 text-sm">
-              <p className="font-bold text-[#0F172A]">Biloti Property Care — Privacy Officer</p>
-              <p>Auckland, New Zealand</p>
-              <p>Email: <a href={siteConfig.contact.emailLink} className="text-[#1F6F50] font-semibold underline">{siteConfig.contact.email}</a></p>
-              <p>Phone: <a href={siteConfig.contact.phoneLink} className="text-[#1F6F50] font-semibold underline">{siteConfig.contact.phone}</a></p>
-              <div className="pt-2 flex items-center gap-4 text-xs">
+          </section>
+
+          <section id="contact" className="space-y-4 pt-4 border-t border-slate-200">
+            <h2 className="text-xl font-bold text-[#0F172A]">
+              7. Contact Us
+            </h2>
+            <p>
+              If you have any questions about this Privacy Policy or your personal information, please contact us using the details below:
+            </p>
+            <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3 text-sm">
+              <p className="font-bold text-base text-[#0F172A]">Biloti</p>
+              <p className="flex items-center gap-2 text-slate-700">
+                <MapPin className="w-4 h-4 text-[#1F6F50] shrink-0" />
+                Auckland, New Zealand
+              </p>
+              <p className="flex items-center gap-2 text-slate-700">
+                <Phone className="w-4 h-4 text-[#1F6F50] shrink-0" />
+                Phone: <a href="tel:021745179" className="text-[#1F6F50] font-semibold hover:underline">021 745 179</a>
+              </p>
+              <p className="flex items-center gap-2 text-slate-700">
+                <Mail className="w-4 h-4 text-[#1F6F50] shrink-0" />
+                Email: <a href="mailto:info@biloti.co.nz" className="text-[#1F6F50] font-semibold hover:underline">info@biloti.co.nz</a>
+              </p>
+              <div className="pt-3 border-t border-slate-200 flex items-center gap-4 text-xs">
                 <Link href="/terms-of-use" className="text-[#1F6F50] font-bold underline">
                   Terms of Use
                 </Link>
                 <span>•</span>
+                <Link href="/get-a-quote" className="text-[#1F6F50] font-bold underline">
+                  Get a Quote
+                </Link>
+                <span>•</span>
                 <Link href="/contact" className="text-[#1F6F50] font-bold underline">
-                  Contact Page
+                  Contact Us
                 </Link>
               </div>
             </div>
@@ -141,3 +184,4 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
+

@@ -301,7 +301,7 @@ export default function HomePage() {
               <div className="relative pt-2">
                 <div className="relative w-full h-[320px] sm:h-[380px] rounded-[32px] overflow-hidden shadow-sm border border-slate-200 bg-white">
                   <Image
-                    src="https://biloti.co.nz/wp-content/uploads/2026/07/ChatGPT-Image-Jul-9-2026-01_46_48-AM-598x484.png"
+                    src="https://lemyteck.com/wp-content/uploads/2026/08/Untitled-design.jpg"
                     alt="Why Choose Biloti Property Care Cleaner"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"

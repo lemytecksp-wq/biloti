@@ -174,9 +174,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {childServices.map((serv) => (
-                  <div
+                  <Link
                     key={serv.slug}
-                    className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-300 flex flex-col group"
+                    href={`/service/${serv.slug}`}
+                    className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-300 flex flex-col group cursor-pointer"
                   >
                     <div className="relative h-48 w-full overflow-hidden">
                       <Image
@@ -201,16 +202,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
                       </div>
 
                       <div className="pt-4 border-t border-slate-100">
-                        <Link
-                          href={`/service/${serv.slug}`}
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#1F6F50] group-hover:text-emerald-700"
-                        >
+                        <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#1F6F50] group-hover:text-emerald-700">
                           <span>Learn More</span>
                           <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                        </span>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -243,35 +241,35 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1.5">
-                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">01. Assessment</span>
+                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">Step 01</span>
                 <h3 className="font-bold text-base text-[#0F172A]">Assessment</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   We assess your site, requirements, priorities, and any specific challenges before work begins.
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1.5">
-                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">02. Preparation</span>
+                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">Step 02</span>
                 <h3 className="font-bold text-base text-[#0F172A]">Preparation</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   Our team develops a clear work plan, confirms resources, and prepares the right equipment and materials.
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1.5">
-                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">03. Execution</span>
+                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">Step 03</span>
                 <h3 className="font-bold text-base text-[#0F172A]">Execution</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   The work is completed safely and efficiently by trained professionals, with minimal disruption to your operations.
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1.5">
-                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">04. Review</span>
+                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">Step 04</span>
                 <h3 className="font-bold text-base text-[#0F172A]">Review</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   We inspect the completed work, check quality standards, and address any areas requiring further attention.
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1.5 sm:col-span-2 lg:col-span-1">
-                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">05. Complete</span>
+                <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">Step 05</span>
                 <h3 className="font-bold text-base text-[#0F172A]">Complete</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   Once approved, we finalise the service, provide relevant documentation, and ensure you are fully satisfied.
@@ -455,27 +453,27 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1">
-                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">01. Assessment</span>
+                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">Step 01</span>
                     <h3 className="font-bold text-sm text-[#0F172A]">Assessment</h3>
                     <p className="text-xs text-slate-600 leading-relaxed">We assess your site, requirements, priorities, and any specific challenges before work begins.</p>
                   </div>
                   <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1">
-                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">02. Preparation</span>
+                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">Step 02</span>
                     <h3 className="font-bold text-sm text-[#0F172A]">Preparation</h3>
                     <p className="text-xs text-slate-600 leading-relaxed">Our team develops a clear work plan, confirms resources, and prepares the right equipment and materials.</p>
                   </div>
                   <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1">
-                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">03. Execution</span>
+                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">Step 03</span>
                     <h3 className="font-bold text-sm text-[#0F172A]">Execution</h3>
                     <p className="text-xs text-slate-600 leading-relaxed">The work is completed safely and efficiently by trained professionals, with minimal disruption to your operations.</p>
                   </div>
                   <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1">
-                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">04. Review</span>
+                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">Step 04</span>
                     <h3 className="font-bold text-sm text-[#0F172A]">Review</h3>
                     <p className="text-xs text-slate-600 leading-relaxed">We inspect the completed work, check quality standards, and address any areas requiring further attention.</p>
                   </div>
                   <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-100 space-y-1 sm:col-span-2">
-                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">05. Complete</span>
+                    <span className="text-xs font-bold text-[#1F6F50] uppercase tracking-wider">Step 05</span>
                     <h3 className="font-bold text-sm text-[#0F172A]">Complete</h3>
                     <p className="text-xs text-slate-600 leading-relaxed">Once approved, we finalise the service, provide relevant documentation, and ensure you are fully satisfied.</p>
                   </div>

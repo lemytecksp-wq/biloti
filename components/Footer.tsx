@@ -112,12 +112,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/service/house-wash" className="hover:text-[#1F6F50] transition-colors flex items-center gap-1.5 text-xs text-slate-500">
+                <Link href="/service/house-wash" className="hover:text-[#1F6F50] transition-colors flex items-center gap-1.5">
                   <span className="text-[#1F6F50]">›</span> Soft-Wash House Washing
                 </Link>
               </li>
               <li>
-                <Link href="/service/office-cleaning" className="hover:text-[#1F6F50] transition-colors flex items-center gap-1.5 text-xs text-slate-500">
+                <Link href="/service/office-cleaning" className="hover:text-[#1F6F50] transition-colors flex items-center gap-1.5">
                   <span className="text-[#1F6F50]">›</span> Office & Workplace Cleaning
                 </Link>
               </li>

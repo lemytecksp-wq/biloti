@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { ChevronRight, FileText, ShieldCheck, Mail, Phone } from 'lucide-react';
+import { ChevronRight, FileText, Mail, Phone, MapPin } from 'lucide-react';
 import { siteConfig } from '@/lib/data/siteConfig';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use | Biloti Property Care',
-  description: 'Terms of Use and conditions for Biloti Property Care services and website usage in Auckland, New Zealand.',
+  title: 'Terms of Use | Biloti',
+  description: 'Terms of Use governing the use of the Biloti website and services throughout New Zealand.',
 };
 
 export default function TermsOfUsePage() {
@@ -26,7 +26,7 @@ export default function TermsOfUsePage() {
             Terms of Use
           </h1>
           <p className="text-xs text-slate-400">
-            Last Updated: August 2026 • Biloti Property Care Auckland
+            Effective Date: 12 July 2026 • Biloti (Great33 Limited)
           </p>
         </div>
       </section>
@@ -40,85 +40,146 @@ export default function TermsOfUsePage() {
             Table of Contents
           </h2>
           <ol className="list-decimal list-inside text-sm text-slate-600 space-y-2 font-medium">
-            <li><a href="#acceptance" className="text-[#1F6F50] hover:underline">Acceptance of Terms</a></li>
-            <li><a href="#services" className="text-[#1F6F50] hover:underline">Services and Quotes</a></li>
-            <li><a href="#booking" className="text-[#1F6F50] hover:underline">Booking, Cancellation and Scheduling</a></li>
-            <li><a href="#access" className="text-[#1F6F50] hover:underline">Property Access, Water and Power Utilities</a></li>
-            <li><a href="#payment" className="text-[#1F6F50] hover:underline">Payment Terms and Invoicing</a></li>
-            <li><a href="#liability" className="text-[#1F6F50] hover:underline">Limitation of Liability and Surface Conditions</a></li>
-            <li><a href="#contact" className="text-[#1F6F50] hover:underline">Contact Information</a></li>
+            <li><a href="#about" className="text-[#1F6F50] hover:underline">About Us</a></li>
+            <li><a href="#enquiries" className="text-[#1F6F50] hover:underline">Enquiries</a></li>
+            <li><a href="#accuracy" className="text-[#1F6F50] hover:underline">Accuracy of Information</a></li>
+            <li><a href="#quotations" className="text-[#1F6F50] hover:underline">Quotations</a></li>
+            <li><a href="#intellectual-property" className="text-[#1F6F50] hover:underline">Intellectual Property</a></li>
+            <li><a href="#availability" className="text-[#1F6F50] hover:underline">Website Availability</a></li>
+            <li><a href="#liability" className="text-[#1F6F50] hover:underline">Limitation of Liability</a></li>
+            <li><a href="#changes" className="text-[#1F6F50] hover:underline">Changes to These Terms</a></li>
+            <li><a href="#governing-law" className="text-[#1F6F50] hover:underline">Governing Law</a></li>
+            <li><a href="#contact" className="text-[#1F6F50] hover:underline">Contact Us</a></li>
           </ol>
         </div>
 
         {/* Legal Sections */}
         <div className="bg-white p-8 sm:p-12 rounded-2xl border border-slate-200 shadow-xs space-y-8 text-slate-700 leading-relaxed text-sm sm:text-base">
           
-          <section id="acceptance" className="space-y-3">
+          <div className="space-y-3 border-b border-slate-200 pb-6">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#1F6F50]">
+              Effective Date: 12 July 2026
+            </p>
+            <p className="text-base sm:text-lg text-[#0F172A] font-medium leading-relaxed">
+              These Terms of Use govern your use of the Biloti website and services. By using our website or submitting an enquiry, you agree to these terms.
+            </p>
+          </div>
+
+          <section id="about" className="space-y-3">
             <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
-              1. Acceptance of Terms
+              1. About Us
             </h2>
             <p>
-              Welcome to the website of Biloti Property Care (&quot;Biloti&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). By accessing or using our website at <Link href="/" className="text-[#1F6F50] font-semibold underline">biloti.co.nz</Link> or engaging our water blasting, cleaning, pest control, or garden maintenance services, you agree to be bound by these Terms of Use and all applicable New Zealand laws.
+              Biloti is a trading name of Great33 Limited, providing commercial cleaning and facilities management services throughout New Zealand.
             </p>
           </section>
 
-          <section id="services" className="space-y-3">
+          <section id="enquiries" className="space-y-3">
             <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
-              2. Services and Quotes
+              2. Enquiries
             </h2>
             <p>
-              All service estimations, quotes, and descriptions provided via our website or written communication are subject to physical site inspection or verification. Quotes remain valid for 30 days from issuance unless specified otherwise. We reserve the right to revise quotes if site conditions differ materially from initial client disclosures.
+              Submitting an enquiry or requesting a quote does not create a contract for services. All quotations are subject to review and acceptance.
             </p>
           </section>
 
-          <section id="booking" className="space-y-3">
+          <section id="accuracy" className="space-y-3">
             <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
-              3. Booking, Cancellation and Scheduling
+              3. Accuracy of Information
             </h2>
             <p>
-              Clients may reschedule or cancel confirmed bookings by notifying us at least 24 hours prior to the scheduled start time. Cancellations made with less than 24 hours notice may incur a reasonable administrative or travel fee. In the event of severe weather conditions impacting safety (such as heavy rain or high winds for roof treatments and exterior washing), Biloti reserves the right to reschedule services to the next available date.
+              You agree to provide accurate and complete information when submitting enquiries. We are not responsible for delays or incorrect quotations resulting from inaccurate information.
             </p>
           </section>
 
-          <section id="access" className="space-y-3">
+          <section id="quotations" className="space-y-3">
             <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
-              4. Property Access, Water and Power Utilities
+              4. Quotations
             </h2>
             <p>
-              Clients must ensure safe and unobstructed access to the property at the agreed appointment time. For exterior water blasting, house washing, and carpet cleaning, clients must provide access to an adequate supply of clean running water and standard mains electrical power unless prior arrangements have been made.
+              All quotations are provided based on the information supplied and may be revised following a site inspection or additional information.
             </p>
           </section>
 
-          <section id="payment" className="space-y-3">
+          <section id="intellectual-property" className="space-y-3">
             <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
-              5. Payment Terms and Invoicing
+              5. Intellectual Property
             </h2>
             <p>
-              Invoices for completed residential services are due upon completion of work unless credit terms have been approved in writing. Commercial invoices are payable strictly within 7 or 20 calendar days from invoice date as stated on the invoice document. Late payments may accrue interest at standard bank overdraft rates plus collection fees.
+              All content on this website, including text, graphics, logos, branding, and images, is owned by or licensed to Great33 Limited and may not be copied, reproduced, or distributed without prior written permission.
+            </p>
+          </section>
+
+          <section id="availability" className="space-y-3">
+            <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
+              6. Website Availability
+            </h2>
+            <p>
+              We aim to keep our website available and up to date but do not guarantee uninterrupted access or that the website will always be free from errors.
             </p>
           </section>
 
           <section id="liability" className="space-y-3">
             <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
-              6. Limitation of Liability and Surface Conditions
+              7. Limitation of Liability
             </h2>
             <p>
-              While Biloti takes extreme care using soft-wash low-pressure techniques and bio-safe chemistry, we are not responsible for pre-existing structural defects, rotted timber weatherboards, degraded window rubber seals, loose paint, or unsealed brick work. Clients are required to advise us of any fragile or damaged building materials prior to service commencement.
+              To the maximum extent permitted by New Zealand law, Great33 Limited shall not be liable for any indirect, incidental, or consequential loss arising from the use of this website or reliance on information provided on it.
             </p>
           </section>
 
-          <section id="contact" className="space-y-3 pt-4 border-t border-slate-200">
+          <section id="changes" className="space-y-3">
+            <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
+              8. Changes to These Terms
+            </h2>
+            <p>
+              We may update these Terms of Use from time to time. The latest version will always be published on our website.
+            </p>
+          </section>
+
+          <section id="governing-law" className="space-y-3">
+            <h2 className="text-xl font-bold text-[#0F172A] border-b border-slate-200 pb-2">
+              9. Governing Law
+            </h2>
+            <p>
+              These Terms of Use are governed by the laws of New Zealand, and any disputes shall be subject to the exclusive jurisdiction of the New Zealand courts.
+            </p>
+          </section>
+
+          <section id="contact" className="space-y-4 pt-4 border-t border-slate-200">
             <h2 className="text-xl font-bold text-[#0F172A]">
-              7. Contact Information
+              10. Contact Us
             </h2>
             <p>
               If you have any questions regarding these Terms of Use, please contact us:
             </p>
-            <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 space-y-1.5 text-sm">
-              <p className="font-bold text-[#0F172A]">Biloti Property Care</p>
-              <p>Auckland, New Zealand</p>
-              <p>Email: <a href={siteConfig.contact.emailLink} className="text-[#1F6F50] font-semibold underline">{siteConfig.contact.email}</a></p>
-              <p>Phone: <a href={siteConfig.contact.phoneLink} className="text-[#1F6F50] font-semibold underline">{siteConfig.contact.phone}</a></p>
+            <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3 text-sm">
+              <p className="font-bold text-base text-[#0F172A]">Biloti</p>
+              <p className="flex items-center gap-2 text-slate-700">
+                <MapPin className="w-4 h-4 text-[#1F6F50] shrink-0" />
+                Auckland, New Zealand
+              </p>
+              <p className="flex items-center gap-2 text-slate-700">
+                <Phone className="w-4 h-4 text-[#1F6F50] shrink-0" />
+                Phone: <a href="tel:021745179" className="text-[#1F6F50] font-semibold hover:underline">021 745 179</a>
+              </p>
+              <p className="flex items-center gap-2 text-slate-700">
+                <Mail className="w-4 h-4 text-[#1F6F50] shrink-0" />
+                Email: <a href="mailto:info@biloti.co.nz" className="text-[#1F6F50] font-semibold hover:underline">info@biloti.co.nz</a>
+              </p>
+              <div className="pt-3 border-t border-slate-200 flex items-center gap-4 text-xs">
+                <Link href="/privacy-policy" className="text-[#1F6F50] font-bold underline">
+                  Privacy Policy
+                </Link>
+                <span>•</span>
+                <Link href="/get-a-quote" className="text-[#1F6F50] font-bold underline">
+                  Get a Quote
+                </Link>
+                <span>•</span>
+                <Link href="/contact" className="text-[#1F6F50] font-bold underline">
+                  Contact Us
+                </Link>
+              </div>
             </div>
           </section>
 
