@@ -48,16 +48,24 @@ export default function ContactPage() {
     setErrorMessage(null);
 
     try {
-      const res = await fetch('/api/contact', {
+      const encodedData = new URLSearchParams({
+        'form-name': 'contact',
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+        privacyConsent: formData.privacyConsent ? 'Yes' : 'No',
+      }).toString();
+
+      const res = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodedData,
       });
 
-      const data = await res.json();
-
-      if (res.ok && data.success) {
-        setSuccessMessage(data.message);
+      if (res.ok) {
+        setSuccessMessage('Thank you! Your message has been sent successfully.');
         setFormData({
           fullName: '',
           email: '',
@@ -67,7 +75,7 @@ export default function ContactPage() {
           privacyConsent: false,
         });
       } else {
-        setErrorMessage(data.message || 'Failed to submit form. Please try again.');
+        setErrorMessage('Failed to submit form. Please try again.');
       }
     } catch (err) {
       console.error(err);
@@ -237,7 +245,14 @@ export default function ContactPage() {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                onSubmit={handleSubmit}
+                className="space-y-4"
+              >
+                <input type="hidden" name="form-name" value="contact" />
                 
                 {/* Full Name */}
                 <div>
